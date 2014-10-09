@@ -1,26 +1,38 @@
-$:.push File.expand_path("../lib", __FILE__)
+# -*- encoding: utf-8 -*-
+# stub: will_filter 3.1.11 ruby lib
 
-# Maintain your gem's version:
-require "will_filter/version"
-
-# Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "will_filter"
-  s.version     = WillFilter::VERSION
-  s.authors     = ["Michael Berkovich"]
-  s.email       = ["theiceberk@gmail.com"]
-  s.homepage    = "https://github.com/berk/will_filter"
-  s.summary     = "A filtering engine plugin for Rails 3.1"
+  s.name = "will_filter"
+  s.version = "3.1.11"
+
+  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
+  s.require_paths = ["lib"]
+  s.authors = ["Michael Berkovich"]
+  s.date = "2014-10-08"
   s.description = "will_filter is a powerful customizable framework for filtering active_record models."
+  s.email = ["theiceberk@gmail.com"]
+  s.extra_rdoc_files = ["README.rdoc"]
+  s.files = [".gitignore", ".rspec", ".rvmrc", ".watchr", "CHANGELOG.rdoc", "Gemfile", "Gemfile.lock", "MIT-LICENSE", "README.rdoc", "Rakefile", "app/assets/images/will_filter/.gitkeep", "app/assets/images/will_filter/buttons.png", "app/assets/images/will_filter/calendar.png", "app/assets/images/will_filter/clock.png", "app/assets/images/will_filter/close.gif", "app/assets/images/will_filter/filter.png", "app/assets/images/will_filter/sort_arrow_all.gif", "app/assets/images/will_filter/sort_bg.gif", "app/assets/images/will_filter/spinner.gif", "app/assets/javascripts/will_filter/filter.js", "app/assets/javascripts/will_filter/filter_prototype_effects.js", "app/assets/stylesheets/will_filter/actions.css.scss", "app/assets/stylesheets/will_filter/buttons.css.scss", "app/assets/stylesheets/will_filter/calendar.css.scss", "app/assets/stylesheets/will_filter/exporter.css.scss", "app/assets/stylesheets/will_filter/filter.css.scss", "app/assets/stylesheets/will_filter/results.css.scss", "app/controllers/will_filter/calendar_controller.rb", "app/controllers/will_filter/exporter_controller.rb", "app/controllers/will_filter/filter_controller.rb", "app/models/will_filter/filter.rb", "app/views/layouts/will_filter/application.html.erb", "app/views/will_filter/calendar/_annual.html.erb", "app/views/will_filter/calendar/_month.html.erb", "app/views/will_filter/calendar/_quarter.html.erb", "app/views/will_filter/calendar/index.html.erb", "app/views/will_filter/common/_actions_bar.html.erb", "app/views/will_filter/common/_details_table.html.erb", "app/views/will_filter/common/_results_table.html.erb", "app/views/will_filter/common/_results_table_summary.html.erb", "app/views/will_filter/common/_scripts.html.erb", "app/views/will_filter/exporter/export.html.erb", "app/views/will_filter/exporter/index.html.erb", "app/views/will_filter/filter/_condition.html.erb", "app/views/will_filter/filter/_conditions.html.erb", "app/views/will_filter/filter/_conditions_footer.html.erb", "app/views/will_filter/filter/_conditions_header.html.erb", "app/views/will_filter/filter/_container.html.erb", "app/views/will_filter/filter/containers/_blank.html.erb", "app/views/will_filter/filter/containers/_boolean.html.erb", "app/views/will_filter/filter/containers/_date.html.erb", "app/views/will_filter/filter/containers/_date_range.html.erb", "app/views/will_filter/filter/containers/_date_time.html.erb", "app/views/will_filter/filter/containers/_date_time_range.html.erb", "app/views/will_filter/filter/containers/_list.html.erb", "app/views/will_filter/filter/containers/_numeric_range.html.erb", "app/views/will_filter/filter/containers/_text.html.erb", "app/views/will_filter/filter/index.html.erb", "config/routes.rb", "lib/generators/will_filter/templates/config.yml", "lib/generators/will_filter/templates/create_will_filter_filters.rb", "lib/generators/will_filter/will_filter_generator.rb", "lib/tasks/will_filter_tasks.rake", "lib/will_filter.rb", "lib/will_filter/calendar.rb", "lib/will_filter/config.rb", "lib/will_filter/containers/boolean.rb", "lib/will_filter/containers/date.rb", "lib/will_filter/containers/date_range.rb", "lib/will_filter/containers/date_time.rb", "lib/will_filter/containers/date_time_range.rb", "lib/will_filter/containers/double.rb", "lib/will_filter/containers/double_delimited.rb", "lib/will_filter/containers/double_range.rb", "lib/will_filter/containers/filter_list.rb", "lib/will_filter/containers/list.rb", "lib/will_filter/containers/nil.rb", "lib/will_filter/containers/numeric.rb", "lib/will_filter/containers/numeric_delimited.rb", "lib/will_filter/containers/numeric_range.rb", "lib/will_filter/containers/single_date.rb", "lib/will_filter/containers/text.rb", "lib/will_filter/containers/text_delimited.rb", "lib/will_filter/engine.rb", "lib/will_filter/extensions/action_controller_extension.rb", "lib/will_filter/extensions/action_view_extension.rb", "lib/will_filter/extensions/active_record_extension.rb", "lib/will_filter/extensions/array_extension.rb", "lib/will_filter/filter_condition.rb", "lib/will_filter/filter_container.rb", "lib/will_filter/filter_exception.rb", "lib/will_filter/railtie.rb", "lib/will_filter/version.rb", "script/rails", "spec/config/config_spec.rb", "spec/lib/will_filter/containers/double_spec.rb", "spec/lib/will_filter/extensions/active_record_extension_spec.rb", "spec/models/will_filter/filter_spec.rb", "spec/spec_helper.rb", "test/dummy/.sass-cache/f9cb1ef521115be73f1c61d3d5d64f66c947af63/actions.css.scssc", "test/dummy/.sass-cache/f9cb1ef521115be73f1c61d3d5d64f66c947af63/results.css.scssc", "test/dummy/Rakefile", "test/dummy/app/assets/javascripts/application.js", "test/dummy/app/assets/javascripts/orders.js", "test/dummy/app/assets/stylesheets/application.css", "test/dummy/app/assets/stylesheets/kaminari.css", "test/dummy/app/assets/stylesheets/orders.css", "test/dummy/app/controllers/advanced_controller.rb", "test/dummy/app/controllers/application_controller.rb", "test/dummy/app/controllers/orders_controller.rb", "test/dummy/app/controllers/simple_controller.rb", "test/dummy/app/helpers/application_helper.rb", "test/dummy/app/helpers/orders_helper.rb", "test/dummy/app/mailers/.gitkeep", "test/dummy/app/models/.gitkeep", "test/dummy/app/models/event.rb", "test/dummy/app/models/event_filter.rb", "test/dummy/app/models/event_user.rb", "test/dummy/app/models/event_user_filter.rb", "test/dummy/app/models/merchant/order.rb", "test/dummy/app/models/merchant/order_filter.rb", "test/dummy/app/models/merchant/order_item.rb", "test/dummy/app/models/merchant/order_item_filter.rb", "test/dummy/app/models/user.rb", "test/dummy/app/models/user_filter.rb", "test/dummy/app/views/advanced/event_members.html.erb", "test/dummy/app/views/advanced/events.html.erb", "test/dummy/app/views/advanced/users.html.erb", "test/dummy/app/views/advanced/users_with_actions.html.erb", "test/dummy/app/views/common/_event_members.html.erb", "test/dummy/app/views/common/_events.html.erb", "test/dummy/app/views/common/_menu.html.erb", "test/dummy/app/views/common/_users.html.erb", "test/dummy/app/views/kaminari/_first_page.html.erb", "test/dummy/app/views/kaminari/_gap.html.erb", "test/dummy/app/views/kaminari/_last_page.html.erb", "test/dummy/app/views/kaminari/_next_page.html.erb", "test/dummy/app/views/kaminari/_page.html.erb", "test/dummy/app/views/kaminari/_paginator.html.erb", "test/dummy/app/views/kaminari/_prev_page.html.erb", "test/dummy/app/views/layouts/application.html.erb", "test/dummy/app/views/orders/index.html.erb", "test/dummy/app/views/orders/items.html.erb", "test/dummy/app/views/simple/event_members.html.erb", "test/dummy/app/views/simple/events.html.erb", "test/dummy/app/views/simple/users.html.erb", "test/dummy/config.ru", "test/dummy/config/application.rb", "test/dummy/config/boot.rb", "test/dummy/config/data/female_names.txt", "test/dummy/config/data/last_names.txt", "test/dummy/config/data/male_names.txt", "test/dummy/config/database.yml", "test/dummy/config/environment.rb", "test/dummy/config/environments/development.rb", "test/dummy/config/environments/production.rb", "test/dummy/config/environments/test.rb", "test/dummy/config/initializers/backtrace_silencers.rb", "test/dummy/config/initializers/inflections.rb", "test/dummy/config/initializers/mime_types.rb", "test/dummy/config/initializers/secret_token.rb", "test/dummy/config/initializers/session_store.rb", "test/dummy/config/initializers/wrap_parameters.rb", "test/dummy/config/locales/en.yml", "test/dummy/config/routes.rb", "test/dummy/config/will_filter/config.yml", "test/dummy/db/migrate/20090416182137_create_users.rb", "test/dummy/db/migrate/20090418042757_create_events.rb", "test/dummy/db/migrate/20090418062225_create_event_users.rb", "test/dummy/db/migrate/20110924023807_create_will_filter_filters.rb", "test/dummy/db/migrate/20111001193019_create_orders.rb", "test/dummy/db/migrate/20111001193027_create_order_items.rb", "test/dummy/db/migrate/20120223232000_add_rank_to_events.rb", "test/dummy/db/schema.rb", "test/dummy/lib/assets/.gitkeep", "test/dummy/lib/tasks/dummy.rake", "test/dummy/log/.gitkeep", "test/dummy/public/404.html", "test/dummy/public/422.html", "test/dummy/public/500.html", "test/dummy/public/favicon.ico", "test/dummy/script/rails", "test/dummy/test/functional/orders_controller_test.rb", "test/dummy/test/unit/helpers/orders_helper_test.rb", "test/test_helper.rb", "test/will_filter_test.rb", "will_filter.gemspec"]
+  s.homepage = "https://github.com/berk/will_filter"
+  s.licenses = ["MIT"]
+  s.rubygems_version = "2.2.2"
+  s.summary = "A filtering engine plugin for Rails 3.1"
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.extra_rdoc_files = ['README.rdoc']
-  s.require_paths = ['lib']
+  if s.respond_to? :specification_version then
+    s.specification_version = 4
 
-  s.licenses = ['MIT']
-
-  s.add_dependency 'rails', ['>= 3.2.3']
-  s.add_dependency 'kaminari', ['>= 0']
-  s.add_dependency 'sass', ['>= 0']
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<rails>, [">= 3.2.3"])
+      s.add_runtime_dependency(%q<kaminari>, [">= 0"])
+      s.add_runtime_dependency(%q<sass>, [">= 0"])
+    else
+      s.add_dependency(%q<rails>, [">= 3.2.3"])
+      s.add_dependency(%q<kaminari>, [">= 0"])
+      s.add_dependency(%q<sass>, [">= 0"])
+    end
+  else
+    s.add_dependency(%q<rails>, [">= 3.2.3"])
+    s.add_dependency(%q<kaminari>, [">= 0"])
+    s.add_dependency(%q<sass>, [">= 0"])
+  end
 end

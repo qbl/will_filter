@@ -11,18 +11,18 @@
 <% end %>
 
 <tr>
-  <td class="condition">
+  <td class="condition" style="border-top: none;">
     <%= select_tag "wf_c#{index}", options_for_select(wf_filter.condition_options, condition.key.to_s), {:class=>"wf_input full_width", :onChange=>"wfFilter.updateConditionAt('#{index}')"} %>
   </td>
-  <td class="operator">
+  <td class="operator" style="border-top: none;">
     <%= select_tag "wf_o#{index}", options_for_select(wf_filter.operator_options_for(condition.key), condition.operator.to_s), {:class=>"wf_input full_width", :onChange=>"wfFilter.updateConditionAt('#{index}')"} %>
   </td>
-  <td class="values">
-	  <%= render :partial => "/will_filter/filter/containers/#{condition.container.template_name}", :locals => {:container => condition.container, :index => index} %>
+  <td class="values" style="border-top: none;">
+    <%= render :partial => "/will_filter/filter/containers/#{condition.container.template_name}", :locals => {:container => condition.container, :index => index} %>
   </td>
-  <td class="actions">
-    <%=link_to_function("<span>-</span>".html_safe, "wfFilter.removeConditionAt('#{index}')", :class => "wf_grey_button wf_pcb") %>
-    <%=link_to_function("<span>+</span>".html_safe, "wfFilter.addConditionAfter('#{index}')", :class => "wf_grey_button wf_pcb") %>
+  <td class="actions" style="border-top: none;">
+    <%=link_to_function("<span>-</span>".html_safe, "wfFilter.removeConditionAt('#{index}')", :class => "btn-u btn-u-xs") %>
+    <%=link_to_function("<span>+</span>".html_safe, "wfFilter.addConditionAfter('#{index}')", :class => "btn-u btn-u-xs") %>
   </td>
 </tr>
       
