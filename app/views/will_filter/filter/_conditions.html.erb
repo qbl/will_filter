@@ -15,15 +15,14 @@
         <%=link_to_function("Toggle Conditions", "wfFilter.toggleDebugger()") %>
       </small>
     </div>
-    Match <%= select_tag(:wf_match, options_for_select(wf_filter.match_options, wf_filter.match), {:onChange=>"wfFilter.markDirty()"}) %>
-    of the following conditions:
+    Penerima manfaat harus memenuhi <%= select_tag(:wf_match, options_for_select(wf_filter.match_options, wf_filter.match), {:onChange=>"wfFilter.markDirty()"}) %>
+    kriteria berikut:
   </div>
 
   <% if wf_filter.size == 0 %>
     <div class="no_filter_hint">
-      You haven't added any filter conditions, so all of the results were returned.
-      Use the "Add" button in the bottom left corner to add a new condition or select
-      a predefined filter from a drop-down list above.
+      Anda belum menambahkan kriteria apa pun, aplikasi menampilkan daftar seluruh penduduk.
+      Gunakan tombol "Tambah" pada bagian kiri bawah untuk menambah kriteria baru atau pilih kriteria yang sudah disimpan sebelumnya pada menu drop-down di atas.
     </div>
   <% else %>
     <table class="table" cellpadding="0" cellspacing="0">

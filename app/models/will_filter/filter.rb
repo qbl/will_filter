@@ -297,7 +297,7 @@ module WillFilter
     end
     
     def match_options
-      [["all", "all"], ["any", "any"]]
+      [["seluruh", "all"], ["salah satu", "any"]]
     end
     
     def order_type_options
@@ -716,12 +716,12 @@ module WillFilter
         if include_default
           filters = default_filters
           if (filters.size > 0)
-            filters.insert(0, ["-- Select Default Filter --", "-1"])
+            filters.insert(0, ["-- Pilih Kriteria Default --", "-1"])
           end
         end
   
         if user_filters.any?
-          filters << ["-- Select Saved Filter --", "-2"] if include_default
+          filters << ["-- Pilih Kriteria Penerima Manfaat --", "-2"] if include_default
           user_filters.each do |filter|
             filters << [filter.name, filter.id.to_s]
           end
