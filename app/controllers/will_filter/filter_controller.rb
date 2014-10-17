@@ -110,5 +110,9 @@ module WillFilter
       
       render(:partial => '/will_filter/filter/conditions', :layout=>false, :locals => {:wf_filter => wf_filter})
     end
+
+    def filter_params
+      params.require(:filter).permit(:type, :name, :data, :user_id, :model_class_name)
+    end
   end
 end
