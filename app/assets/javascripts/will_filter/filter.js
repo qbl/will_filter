@@ -566,3 +566,47 @@ function initializeWillFilter() {
 	
   Wf.Utils.addEvent(window,'load',setup);
 }
+
+
+/****************************************************************************
+**** Additional Methods
+****************************************************************************/
+$('#export_data').click(function (event) {
+  wfExporter.show(this);
+  event.preventDefault();
+});
+
+$('#save_filter').click(function (event) {
+  wfFilter.saveFilter();
+  event.preventDefault();
+});
+
+$('#update_filter').click(function (event) {
+  wfFilter.updateFilter();
+  event.preventDefault();
+});
+
+$('#delete_filter').click(function (event) {
+  wfFilter.deleteFilter();
+  event.preventDefault();
+});
+
+$('#toggle_conditions').click(function (event) {
+  wfFilter.toggleDebugger();
+  event.preventDefault();
+});
+
+$('#add_condition').click(function (event) {
+  wfFilter.addCondition();
+  event.preventDefault();
+});
+
+$('#remove_all_conditions').click(function (event) {
+  wfFilter.removeAllConditions();
+  event.preventDefault();
+});
+
+$('#sumbit_filter').click(function (event) {
+  wfFilter.submit();
+  event.preventDefault();
+});

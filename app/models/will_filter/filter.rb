@@ -705,7 +705,8 @@ module WillFilter
           end
         end
   
-        WillFilter::Filter.find(:all, :conditions => conditions)
+        # WillFilter::Filter.find(:all, :conditions => conditions)
+        WillFilter::Filter.where(conditions)
       end
     end
 

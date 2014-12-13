@@ -21,8 +21,8 @@
     <%= render :partial => "/will_filter/filter/containers/#{condition.container.template_name}", :locals => {:container => condition.container, :index => index} %>
   </td>
   <td class="actions" style="border-top: none; padding-top: 1px;">
-    <%=link_to_function("<span>-</span>".html_safe, "wfFilter.removeConditionAt('#{index}')", :class => "btn-u btn-brd btn-u-xs") %>
-    <%=link_to_function("<span>+</span>".html_safe, "wfFilter.addConditionAfter('#{index}')", :class => "btn-u brd btn-brd btn-u-xs") %>
+    <%=link_to("<span>-</span>".html_safe, "javascript:wfFilter.removeConditionAt('#{index}');", :class => "btn-u btn-brd btn-u-xs") %>
+    <%=link_to("<span>+</span>".html_safe, "javascript:wfFilter.addConditionAfter('#{index}');", :class => "btn-u brd btn-brd btn-u-xs") %>
   </td>
 </tr>
       
